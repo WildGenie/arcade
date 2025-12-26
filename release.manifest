@@ -1,0 +1,91 @@
+CACHE MANIFEST
+
+CACHE:
+/arcade/semantic.js
+/arcade/main.js
+/arcade/pxtapp.js
+/arcade/typescript.js
+/arcade/marked/marked.min.js
+/arcade/highlight.js/highlight.pack.js
+/arcade/jquery.js
+/arcade/pxtlib.js
+/arcade/pxtcompiler.js
+/arcade/pxtpy.js
+/arcade/pxteditor.js
+/arcade/pxtsim.js
+/arcade/pxtembed.js
+/arcade/pxtworker.js
+/arcade/pxtweb.js
+/arcade/blockly.css
+/arcade/semantic.css
+/arcade/rtlsemantic.css
+
+
+/arcade/editor.js
+
+
+# blockly
+/arcade/blockly/media/sprites.png
+/arcade/blockly/media/click.mp3
+/arcade/blockly/media/disconnect.wav
+/arcade/blockly/media/delete.mp3
+
+# monaco; keep in sync with webapp/public/index.html
+/arcade/vs/loader.js
+/arcade/vs/base/worker/workerMain.js
+/arcade/vs/basic-languages/bat/bat.js
+/arcade/vs/basic-languages/cpp/cpp.js
+/arcade/vs/basic-languages/python/python.js
+/arcade/vs/basic-languages/typescript/typescript.js
+/arcade/vs/basic-languages/markdown/markdown.js
+/arcade/vs/editor/editor.main.css
+/arcade/vs/editor/editor.main.js
+/arcade/vs/editor/editor.main.nls.js
+/arcade/vs/language/json/jsonMode.js
+/arcade/vs/language/json/jsonWorker.js
+/arcade/vs/language/typescript/tsMode.js
+/arcade/vs/language/typescript/tsWorker.js
+
+# charts
+/arcade/smoothie/smoothie_compressed.js
+/arcade/images/Bars_black.gif
+
+# gifjs
+/arcade/gifjs/gif.js
+
+# ai
+/arcade/ai.0.js
+
+/arcade/worker.js
+/arcade/monacoworker.js
+
+# ver Fri Dec 26 2025 04:19:10 GMT+0300 (GMT+03:00)
+
+# target
+/arcade/docs/static/providers/github-mark.png
+/arcade/docs/static/providers/microsoft-logo.svg
+/arcade/docs/static/providers/google-logo.svg
+/arcade/docs/static/providers/clever-logo.png
+/arcade/docs/static/logo.svg
+/arcade/docs/static/logo.png
+/arcade/docs/static/icons/favicon.ico
+/arcade/docs/static/Micorsoft_logo_rgb_W-white_D-square.png
+/arcade/docs/static/Micorsoft_logo_rgb_W-white_D.png
+/arcade/docs/static/hero-gallery/multiplayer-banner.png
+/arcade/docs/static/badges/badge-forest.png
+/arcade/docs/static/badges/badge-forest-locked.png
+/arcade/docs/static/badges/badge-zoo.png
+/arcade/docs/static/badges/badge-zoo-locked.png
+/arcade/docs/static/badges/badge-rockstar.png
+/arcade/docs/static/badges/badge-rockstar-locked.png
+/arcade/docs/static/badges/badge-jungle.png
+/arcade/docs/static/badges/badge-jungle-locked.png
+/arcade/docs/static/badges/badge-space.png
+/arcade/docs/static/badges/badge-space-locked.png
+/arcade/docs/static/badges/badge-shark.png
+/arcade/docs/static/badges/badge-shark-locked.png
+
+/arcade/target.js
+
+NETWORK:
+*

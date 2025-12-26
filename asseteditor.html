@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"  manifest="/arcade/release.manifest" data-framework="typescript">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" data-rtl="/arcade/rtlsemantic.css" href="/arcade/semantic.css" type="text/css">
+    <title>MakeCode Asset Editor</title>
+    <style>
+        #asset-editor-field-div {
+            height: 100%;
+        }
+        .image-editor-wrapper {
+            border-radius: 0;
+        }
+        .image-editor-confirm {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // This line gets patched up by the cloud
+        var pxtConfig = {
+    "relprefix": "/arcade/",
+    "verprefix": "",
+    "workerjs": "/arcade/worker.js",
+    "monacoworkerjs": "/arcade/monacoworker.js",
+    "gifworkerjs": "/arcade/gifjs/gif.worker.js",
+    "serviceworkerjs": "/arcade/serviceworker.js",
+    "typeScriptWorkerJs": "/arcade/tsworker.js",
+    "pxtVersion": "12.2.13",
+    "pxtRelId": "localDirRelId",
+    "pxtCdnUrl": "/arcade/",
+    "commitCdnUrl": "/arcade/",
+    "blobCdnUrl": "/arcade/",
+    "cdnUrl": "/arcade/",
+    "targetVersion": "0.0.0",
+    "targetRelId": "",
+    "targetUrl": "",
+    "targetId": "arcade",
+    "simUrl": "/arcade/simulator.html",
+    "simserviceworkerUrl": "/arcade/simulatorserviceworker.js",
+    "simworkerconfigUrl": "/arcade/workerConfig.js",
+    "partsUrl": "/arcade/siminstructions.html",
+    "runUrl": "/arcade/run.html",
+    "docsUrl": "/arcade/docs.html",
+    "multiUrl": "/arcade/multi.html",
+    "asseteditorUrl": "/arcade/asseteditor.html",
+    "isStatic": true,
+    "kioskUrl": "/arcade/kiosk.html",
+    "teachertoolUrl": "/arcade/teachertool.html",
+    "tutorialtoolUrl": "/arcade/tutorialtool.html",
+    "skillmapUrl": "/arcade/skillmap.html",
+    "multiplayerUrl": "/arcade/multiplayer.html",
+    "authcodeUrl": "/arcade/authcode.html"
+};
+    </script>
+    <script type="text/javascript" src="/arcade/targetlight.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.makecode.com/blob/ec765d3ba50a09c8c8819ec80390b6ffa72e945a/target.js"></script> -->
+    <script type="text/javascript" src="/arcade/pxtapp.js"></script>
+    <script>
+        pxt.setAppTarget(pxtTargetBundle);
+        // This can be overridden via the messages sent to the page
+        pxt.appTarget.runtime.palette = ["#000000","#ffffff","#ff2121","#ff93c4","#ff8135","#fff609","#249ca3","#78dc52","#003fad","#87f2ff","#8e2ec4","#a4839f","#5c406c","#e5cdc4","#91463d","#000000"];
+
+        // this get rewritten to blob URLs with SHAs while uploading to the cloud
+        // keep in sync with index.html
+        window.MonacoPaths = {
+            "vs/loader": "/arcade/vs/loader.js",
+            "vs/base/worker/workerMain": "/arcade/vs/base/worker/workerMain.js",
+            "vs/basic-languages/bat/bat": "/arcade/vs/basic-languages/bat/bat.js",
+            "vs/basic-languages/cpp/cpp": "/arcade/vs/basic-languages/cpp/cpp.js",
+            "vs/basic-languages/markdown/markdown": "/arcade/vs/basic-languages/markdown/markdown.js",
+            "vs/basic-languages/python/python": "/arcade/vs/basic-languages/python/python.js",
+            "vs/basic-languages/typescript/typescript": "/arcade/vs/basic-languages/typescript/typescript.js",
+            "vs/editor/editor.main.css": "/arcade/vs/editor/editor.main.css",
+            "vs/editor/editor.main": "/arcade/vs/editor/editor.main.js",
+            "vs/editor/editor.main.nls": "/arcade/vs/editor/editor.main.nls.js",
+            "vs/language/json/jsonMode": "/arcade/vs/language/json/jsonMode.js",
+            "vs/language/json/jsonWorker": "/arcade/vs/language/json/jsonWorker.js",
+            "vs/language/typescript/tsMode": "/arcade/vs/language/typescript/tsMode.js",
+            "vs/language/typescript/tsWorker": "/arcade/vs/language/typescript/tsWorker.js",
+            "lzma/lzma_worker-min.js": "/arcade/lzma/lzma_worker-min.js",
+            "smoothie/smoothie_compressed.js": "/arcade/smoothie/smoothie_compressed.js",
+            "blockly.css": "/arcade/blockly.css",
+            "rtlblockly.css": "/arcade/rtlblockly.css",
+            "gifjs/gif.js": "/arcade/gifjs/gif.js",
+            "qrcode/qrcode.min.js": "/arcade/qrcode/qrcode.min.js",
+            "zip.js/zip.min.js": "/arcade/zip.js/zip.min.js",
+            "pdf-lib/pdf-lib.min.js": "/arcade/pdf-lib/pdf-lib.min.js",
+            "music-editor/apple.png": "/arcade/music-editor/apple.png",
+            "music-editor/burger.png": "/arcade/music-editor/burger.png",
+            "music-editor/cake.png": "/arcade/music-editor/cake.png",
+            "music-editor/car.png": "/arcade/music-editor/car.png",
+            "music-editor/cat.png": "/arcade/music-editor/cat.png",
+            "music-editor/cherry.png": "/arcade/music-editor/cherry.png",
+            "music-editor/clam.png": "/arcade/music-editor/clam.png",
+            "music-editor/computer.png": "/arcade/music-editor/computer.png",
+            "music-editor/crab.png": "/arcade/music-editor/crab.png",
+            "music-editor/dog.png": "/arcade/music-editor/dog.png",
+            "music-editor/duck.png": "/arcade/music-editor/duck.png",
+            "music-editor/egg.png": "/arcade/music-editor/egg.png",
+            "music-editor/explosion.png": "/arcade/music-editor/explosion.png",
+            "music-editor/fish.png": "/arcade/music-editor/fish.png",
+            "music-editor/ice-cream.png": "/arcade/music-editor/ice-cream.png",
+            "music-editor/lemon.png": "/arcade/music-editor/lemon.png",
+            "music-editor/snake.png": "/arcade/music-editor/snake.png",
+            "music-editor/star.png": "/arcade/music-editor/star.png",
+            "music-editor/strawberry.png": "/arcade/music-editor/strawberry.png",
+            "music-editor/taco.png": "/arcade/music-editor/taco.png",
+            "music-editor/bass-clef.svg": "/arcade/music-editor/bass-clef.svg",
+            "music-editor/treble-clef.svg": "/arcade/music-editor/treble-clef.svg",
+        }
+    </script>
+    <script type="text/javascript" src="/arcade/pxtasseteditor.js"></script>
+    <div id="asset-editor-field-div">
+    </div>
+</body>
+
+</html>
